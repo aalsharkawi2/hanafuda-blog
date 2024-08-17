@@ -1,0 +1,137 @@
+body {
+  background-color: #d9d9d9;
+  margin: 0;
+  font-family: "Footlight MT Light", serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.bg-container {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: calc(100vw - 80px);
+  height: calc(100vh - 80px);
+  border-radius: 25px;
+  min-width: 807px;
+}
+
+.bg-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: url(https://raw.githubusercontent.com/aalsharkawi2/hanafuda-blog/main/assets/background.svg);
+  background-size: contain;
+}
+
+.bg-container::before {
+  transform: rotate(270deg) scale(2.1) translate(0px, 120px);
+}
+.container {
+  display: flex;
+  background-color: #e70012;
+  position: relative;
+  overflow: hidden;
+  width: calc(100vw - 80px);
+  height: calc(100vh - 80px);
+  margin: 39px;
+  border-radius: 25px;
+  z-index: -2;
+  min-width: 807px;
+}
+.header-graphics {
+  display: flex;
+  width: calc(100vw - 80px);
+  justify-content: flex-end;
+  min-width: 807px;
+}
+.moon {
+  margin-top: 50px;
+  margin-right: 25px;
+  height: 214px;
+  width: 214px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -1;
+}
+
+.flowers-up {
+  transform-origin: top right;
+  transform: scale(1.85);
+}
+
+.header-logo {
+  position: absolute;
+  margin-top: 102px;
+  margin-left: 25px;
+  color: #d9d9d9;
+  font-size: 72px;
+}
+
+.header-btn {
+  position: absolute;
+  margin-top: 190px;
+  margin-left: 25px;
+  color: #d9d9d9;
+  font-size: 41px;
+  background-color: #202020;
+  padding: 30px;
+  padding-right: 60px;
+  padding-top: 25px;
+  background: url(https://github.com/aalsharkawi2/hanafuda-blog/raw/main/assets/button.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.feature {
+  position: absolute;
+  margin-left: 25px;
+  width: calc(100% - 50px);
+}
+
+.feature > p {
+  margin-top: 330px;
+  font-size: 50px;
+  color: #d9d9d9;
+  margin-bottom: 10px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "featured"
+    "other1"
+    "other2"
+    "other3";
+  grid-template-rows: 2fr 1fr 1fr 1fr;
+  row-gap: 10px;
+}
+
+.grid-container > div:nth-child(-n+4) {
+  display: flex;
+  background-color: #d9d9d9;
+  color: #202020;
+  padding: 25px;
+  border-radius: 14px;
+}
+
+.grid-container > div:first-child {
+  background-color: #484840;
+  color: #d9d9d9;
+}
+
+.featured-card-bg {
+  background: url(https://raw.githubusercontent.com/aalsharkawi2/hanafuda-blog/main/assets/background.svg);
+  background-size: contain;
+}
+
+
+.featured-card {
+  grid-area: featured;
+  color: #d9d9d9;
+}
